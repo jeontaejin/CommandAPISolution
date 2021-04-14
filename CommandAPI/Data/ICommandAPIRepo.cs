@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using CommandAPI.Models;
+
+namespace CommandAPI.Data
+{
+    public interface ICommandAPIRepo
+    {
+        bool SaveChanges();
+        IEnumerable<Command> GetAllCommands();
+        Command GetCommandById(int id);
+        void CreateCommand(Command cmd);
+        void UpdateCommand(Command cmd);
+        void DeleteCommand(Command cmd);
+    }
+}
